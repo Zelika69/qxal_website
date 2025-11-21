@@ -13,19 +13,19 @@
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">Inicio</a>
+                    <a class="nav-link" href="{{ route('home') }}" wire:navigate>Inicio</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('features') }}">Características</a>
+                    <a class="nav-link" href="{{ route('features') }}" wire:navigate>Características</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">Acerca de</a>
+                    <a class="nav-link" href="{{ route('about') }}" wire:navigate>Acerca de</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contact') }}">Contacto</a>
+                    <a class="nav-link" href="{{ route('contact') }}" wire:navigate>Contacto</a>
                 </li>
 
                 <li class="nav-item">
