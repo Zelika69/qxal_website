@@ -41,17 +41,18 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-4 mb-3">
-                    <div class="h2 fw-bold">23</div>
+                    <div class="h2 fw-bold">{{ $estadisticas->jugadores }}</div>
                     <p class="mb-0">Jugadores felices</p>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="h2 fw-bold">23</div>
+                    <div class="h2 fw-bold">{{ $estadisticas->escuelas }}</div>
                     <p class="mb-0">Escuelas usan Qxal</p>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="h2 fw-bold">23</div>
+                    <div class="h2 fw-bold">{{ $estadisticas->paises }}</div>
                     <p class="mb-0">Paises alrededor del mundo</p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -64,6 +65,23 @@
                     efectivo</p>
             </div>
             <div class="row g-4">
+                @forelse ($caracteristicas as $caracteristica)
+                               <div class="col-lg-3 col-md-6">
+                <div class="card feature-card h-100 text-center p-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-{{ $caracteristica->icon }} text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">{{ $caracteristica->title }}</h5>
+                        <p class="card-text">{{ $caracteristica->description }}</p>
+                        <span class="badge bg-light text-dark">{{ $caracteristica->age_group }}</span>
+                    </div>
+                </div>
+            </div>
+
+                @empty
+                <p class="text-center">No hay características disponibles en este momento.</p>
+                @endforelse
             </div>
         </div>
     </section>
@@ -111,6 +129,26 @@
                 <h2 class="display-5 fw-bold">Lo que dicen padres y maestros</h2>
             </div>
             <div class="row g-4">
+                <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="mb-3">
+
+                        <i class="fas fa-star text-warning"></i>
+
+                    </div>
+                    <p class="mb-3">""</p>
+                    <div class="d-flex align-items-center">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                             style="width: 50px; height: 50px;">
+
+                        </div>
+                        <div>
+                            <div class="fw-bold"></div>
+                            <small class="text-muted"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -128,24 +166,6 @@
                         <button type="submit" class="btn btn-light">Suscribirse</button>
                     </form>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="download" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-4">¿Listo para mejorar las habilidades de tu hijo?</h2>
-            <p class="lead mb-4">Disponible en todas las plataformas</p>
-            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="#" class="btn btn-dark btn-lg">
-                    <i class="fab fa-apple me-2"></i>App Store
-                </a>
-                <a href="#" class="btn btn-success btn-lg">
-                    <i class="fab fa-google-play me-2"></i>Google Play
-                </a>
-                <a href="#" class="btn btn-primary btn-lg">
-                    <i class="fas fa-desktop me-2"></i>Descargar para PC
-                </a>
             </div>
         </div>
     </section>

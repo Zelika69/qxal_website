@@ -6,7 +6,7 @@
                     <h1 class="display-4 fw-bold">Contáctanos</h1>
                     <p class="lead">¡Nos encantaría saber de ti!</p>
                 </div>
-<br><br>
+                <br><br>
                 <form id="contactForm" class="row g-3">
                     <div class="col-md-6">
                         <label for="name" class="form-label">Nombre</label>

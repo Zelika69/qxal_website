@@ -1,3 +1,20 @@
+    <section id="download" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">¿Listo para mejorar las habilidades de tu hijo?</h2>
+            <p class="lead mb-4">Disponible en todas las plataformas</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="#" class="btn btn-dark btn-lg">
+                    <i class="fab fa-apple me-2"></i>App Store
+                </a>
+                <a href="#" class="btn btn-success btn-lg">
+                    <i class="fab fa-google-play me-2"></i>Google Play
+                </a>
+                <a href="#" class="btn btn-primary btn-lg">
+                    <i class="fas fa-desktop me-2"></i>Descargar para PC
+                </a>
+            </div>
+        </div>
+    </section>
     <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row">
@@ -35,6 +52,5 @@
             <div class="text-center">
                 <p>&copy; 2025 Qxal. Todos los derechos reservados.</p>
             </div>
-
         </div>
     </footer>

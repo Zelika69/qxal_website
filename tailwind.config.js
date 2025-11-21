@@ -10,6 +10,6 @@ export default {
         extend: {},
     },
     corePlugins: {
-        preflight: false,  // ⛔ DESACTIVA EL RESET DE TAILWIND
+        preflight: false,  
     },
 };
