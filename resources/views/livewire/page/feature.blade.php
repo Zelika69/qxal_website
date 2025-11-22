@@ -6,22 +6,27 @@
     </div>
 
     <div class="row g-5">
+        @forelse ($caracteristicas as $caracteristica)
         <div class="col-lg-6">
             <div class="row align-items-center">
                 <div class="col-md-4 text-center">
                     <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
                          style="width: 120px; height: 120px;">
-                        <i class="fas fa-eye" style="font-size: 3rem;"></i>
+                        <i class="fas fa-{{$caracteristica->icon}}" style="font-size: 3rem;"></i>
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <h3 class="fw-bold">Estatico</h3>
-                    <p class="text-muted mb-3">descripcion estatica</p>
-                    <span class="badge bg-light text-dark">edad estatica</span>
+                    <h3 class="fw-bold">{{$caracteristica->title}}</h3>
+                    <p class="text-muted mb-3">{{$caracteristica->description}}</p>
+                    <span class="badge bg-light text-dark">{{$caracteristica->age_group}}</span>
                 </div>
             </div>
         </div>
+        @empty
+            
+        @endforelse
 
     </div>
+
 </div>
 </div>
