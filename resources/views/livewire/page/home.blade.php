@@ -66,7 +66,7 @@
             </div>
             <div class="row g-4">
                 @forelse ($caracteristicas as $caracteristica)
-                               <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6">
                 <div class="card feature-card h-100 text-center p-4">
                     <div class="card-body">
                         <div class="mb-3">
@@ -123,36 +123,44 @@
             </div>
         </div>
     </section>
-    <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">Lo que dicen padres y maestros</h2>
-            </div>
-            <div class="row g-4">
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Lo que dicen padres y maestros</h2>
+        </div>
+
+        <div class="row g-4">
+            @forelse ($testimonios as $testimonio)
                 <div class="col-md-6">
-                <div class="testimonial-card">
-                    <div class="mb-3">
-
-                        <i class="fas fa-star text-warning"></i>
-
-                    </div>
-                    <p class="mb-3">""</p>
-                    <div class="d-flex align-items-center">
-                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
-                             style="width: 50px; height: 50px;">
-
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            {{-- Estrellas según rating --}}
+                            @for ($i = 0; $i < $testimonio->rating; $i++)
+                                <i class="fas fa-star text-warning"></i>
+                            @endfor
                         </div>
-                        <div>
-                            <div class="fw-bold"></div>
-                            <small class="text-muted"></small>
+
+                        <p class="mb-3">"{{ $testimonio->text }}"</p>
+
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                style="width: 50px; height: 50px;">
+                                {{ strtoupper(substr($testimonio->name, 0, 1)) }}
+                            </div>
+
+                            <div>
+                                <div class="fw-bold">{{ $testimonio->name }}</div>
+                                <small class="text-muted">{{ $testimonio->role }}</small>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
+            @empty
+                <p class="text-center">No hay testimonios disponibles en este momento.</p>
+            @endforelse
         </div>
-    </section>
-
+    </div>
+</section>
     <section class="py-5 bg-primary text-white">
         <div class="container">
             <div class="row align-items-center">

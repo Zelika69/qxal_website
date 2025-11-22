@@ -21,7 +21,7 @@
                 <h4>Basado en Ciencia</h4>
                 <p>Cada juego está diseñado en base a investigaciones sobre el desarrollo cognitivo y principios de la
                     ciencia del aprendizaje.</p>
-            </div>
+            </div>  
             <div class="col-md-4 text-center">
                 <i class="fas fa-shield-alt text-success mb-3" style="font-size: 3rem;"></i>
                 <h4>Seguro y Protegido</h4>
